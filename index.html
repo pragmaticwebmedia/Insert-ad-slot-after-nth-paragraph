@@ -19,7 +19,7 @@
     googletag.enableServices();
   });
 
-      function loadAds() {
+  //Calling display ad slots
         googletag.cmd.push(function() {
           googletag.display('slot-3');
         });
@@ -41,7 +41,9 @@
 
       </style>
   </head>
-  <body onload="loadAds();">
+    
+    //Sample Site Content
+  <body>
     <p> This is 1st paragragh</p>
     <p> This is 2nd paragragh</p>
     <p> This is 3rd paragragh</p>
@@ -51,7 +53,7 @@
   </body>
 </html>
   
-  
+  //Custom Script for inserting DIV
       <script id="rendered-js" >
       var adcontainer1 = document.querySelector("body > p:nth-child(2)");
       var inner = document.createElement("div");
