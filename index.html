@@ -1,3 +1,4 @@
+
   <html>
   <head>
     <meta charset="utf-8">
@@ -22,6 +23,11 @@
         googletag.cmd.push(function() {
           googletag.display('slot-3');
         });
+        
+        googletag.cmd.push(function() {
+          googletag.display('slot-1');
+        });
+        
       }
       
       
@@ -47,9 +53,15 @@
   
   
       <script id="rendered-js" >
-var adcontainer = document.querySelector("body > p:nth-child(4)");
+      var adcontainer1 = document.querySelector("body > p:nth-child(2)");
+      var inner = document.createElement("div");
+          inner.setAttribute("id","slot-1");
+          inner.setAttribute("style","width: 300px; height:250px");
+           adcontainer1.appendChild(inner);
+           
+      var adcontainer2 = document.querySelector("body > p:nth-child(5)");
       var inner = document.createElement("div");
           inner.setAttribute("id","slot-3");
           inner.setAttribute("style","width: 970px; height:250px");
-           adcontainer.appendChild(inner);
+           adcontainer2.appendChild(inner);
     </script>
